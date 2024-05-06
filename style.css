@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(5,9,130);
+    background: linear-gradient(0deg, rgba(5,9,130,1) 13%, rgba(20,88,222,1) 59%, rgba(20,120,222,1) 80%);
+    font-family: 'Clash Display', sans-serif;
+    color: #FFFFFF;
+}

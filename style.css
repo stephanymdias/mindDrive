@@ -9,14 +9,23 @@
     outline: none;
 }
 
-body{
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
     background: rgb(5, 9, 130);
     background: linear-gradient(0deg, rgba(5, 9, 130, 1) 13%, rgba(20, 88, 222, 1) 59%, rgba(20, 120, 222, 1) 80%);
 }
+
 ul,
 ol {
     list-style: none;
 }
+
+/* cabeçalho */
 
 header {
     padding: 20px 1%;
@@ -38,6 +47,8 @@ header:before {
     top: 0;
     left: 0;
 }
+
+/* navbar */
 
 header nav {
     display: flex;
@@ -84,55 +95,122 @@ header nav li a:hover:after {
     width: 50%;
 }
 
-.title h1{
+/* Início */
+
+.title h1 {
     font-size: 48px;
     margin: 65px;
     text-align: center;
 }
 
-.title p{
+.title p {
     font-size: 24px;
     margin: 70px;
     text-align: center;
-    font-weight:200;
+    font-weight: 200;
 }
 
-.container .button{
-    border: solid 1px #fff;
+/* botão test drive */
+
+.button {
+    border: solid 0.1px #fff;
     padding: 10px;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 12px;
     font-weight: 600;
 }
 
-
-
-/* responsividade */
-
-@keyframes grow {
-    0% {
-        transform: scale(1) rotate(0deg);
-    }
-
-    50% {
-        transform: scale(1.6) rotate(10deg);
-    }
+.carro img {
+    width: 100%;
 }
 
-@-webkit-keyframes grow {
-    0% {
-        transform: scale(1) rotate(0deg);
-    }
+/* Introdução cards */
 
-    50% {
-        transform: scale(1.6) rotate(10deg);
-    }
+.descubra h1 {
+    padding: 0;
+    font-size: 40px;
+    margin: 65px;
+    text-align: center;
 }
 
-@media only screen and (max-width: 290px) {
-    header nav ul {
-        width: 100%;
-        text-align: center;
+.descubra p {
+    font-size: 24px;
+    margin: 70px;
+    text-align: center;
+    font-weight: 200;
+}
+
+/* cards */
+.container_card {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 52px;
+}
+
+.cards {
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    @media(min-width: 40rem) {
+        width: 50%;
+    }
+
+    @media(min-width: 56rem) {
+        width: 33.3%;
+    }
+
+    .card-item {
+        border: solid 1.5px #fff;
+        display: flex;
         flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+        border-radius: 6px;
+        box-shadow: 0 20px 40px -14px rgba(255, 255, 255, 0.315);
+        overflow: hidden;
+        transition: transform 0.5s;
+        -webkit-transition: transform 0.5s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+
+            .card-image {
+                opacity: 1;
+            }
+        }
     }
+
+    .card-info {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        padding: 1rem;
+        line-height: 1.5em;
+    }
+
+    .card-title {
+        font-size: 25px;
+        line-height: 1.1em;
+        color: #ffffff;
+        margin-bottom: 0.2em;
+    }
+
+    .card-image {
+        height: 200px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 6px 6px 0px 0px;
+        opacity: 0.91;
+    }
+}
+
+.carro2 img{
+    width: 100%;
 }

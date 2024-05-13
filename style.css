@@ -118,10 +118,23 @@ header nav li a:hover:after {
     border-radius: 8px;
     font-size: 12px;
     font-weight: 600;
+    margin: auto;
 }
 
-.carro img {
-    width: 100%;
+.button:hover{
+    cursor: pointer;
+    background-color: #050982;
+}
+
+
+
+.carro {
+    display: flex;
+    flex-direction: column;
+}
+
+.carro img{
+    width: 110%;
 }
 
 /* Introdução cards */
@@ -148,19 +161,18 @@ header nav li a:hover:after {
     margin: 52px;
 }
 
+.cardss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
 .cards {
+    width: 300px;
     display: flex;
     padding: 1rem;
     margin-bottom: 2rem;
-    width: 100%;
-
-    @media(min-width: 40rem) {
-        width: 50%;
-    }
-
-    @media(min-width: 56rem) {
-        width: 33.3%;
-    }
 
     .card-item {
         border: solid 1.5px #fff;
@@ -211,6 +223,7 @@ header nav li a:hover:after {
     }
 }
 
-.carro2 img{
-    width: 100%;
+.carro2{
+    background-image: url(./img/CARRO2.png);
+    width: 110%;
 }

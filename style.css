@@ -134,7 +134,7 @@ header nav li a:hover:after {
 }
 
 .carro img{
-    width: 110%;
+    width: 100%;
 }
 
 /* Introdução cards */
@@ -224,6 +224,5 @@ header nav li a:hover:after {
 }
 
 .carro2{
-    background-image: url(./img/CARRO2.png);
-    width: 110%;
+    width: 100%;
 }
